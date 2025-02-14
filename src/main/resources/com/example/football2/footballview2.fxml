@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #f5f5f5;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.football2.FootballController">
+    <tabs>
+        <Tab text="Clients">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <SplitPane dividerPositions="0.29797979797979796" layoutX="-11.0" layoutY="-13.0" prefHeight="580.0" prefWidth="907.0" style="-fx-background-color: #ffffff;">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <ListView fx:id="clientList" layoutX="10.0" layoutY="13.0" prefHeight="562.0" prefWidth="253.0" style="-fx-background-color: #e0f7fa; -fx-border-color: #00796b;" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="383.0" prefWidth="417.0">
+                                    <children>
+                                        <Label layoutX="92.0" layoutY="113.0" style="-fx-font-weight: bold; -fx-text-fill: #00796b;" text="Nom" />
+                                        <TextField fx:id="name" layoutX="137.0" layoutY="109.0" prefHeight="26.0" prefWidth="360.0" style="-fx-background-color: #f1f8e9; -fx-border-color: #00796b;" />
+                                        <TextArea fx:id="adresse" layoutX="137.0" layoutY="198.0" prefHeight="47.0" prefWidth="359.0" style="-fx-background-color: #f1f8e9; -fx-border-color: #00796b;" />
+                                        <Label layoutX="83.0" layoutY="213.0" style="-fx-font-weight: bold; -fx-text-fill: #00796b;" text="Adresse" />
+                                        <Label layoutX="91.0" layoutY="157.0" style="-fx-font-weight: bold; -fx-text-fill: #00796b;" text="Email" />
+                                        <TextField fx:id="email" layoutX="138.0" layoutY="152.0" prefHeight="26.0" prefWidth="359.0" style="-fx-background-color: #f1f8e9; -fx-border-color: #00796b;" />
+                                        <Button layoutX="150.0" layoutY="294.0" mnemonicParsing="false" onAction="#add_client" prefHeight="27.0" prefWidth="334.0" style="-fx-background-color: #00796b; -fx-text-fill: white;" text="Ajouter un client" />
+                                        <Label layoutX="83.0" layoutY="74.0" style="-fx-font-weight: bold; -fx-text-fill: #00796b;" text="Prénom" />
+                                        <TextField fx:id="firstname" layoutX="136.0" layoutY="70.0" prefHeight="26.0" prefWidth="360.0" style="-fx-background-color: #f1f8e9; -fx-border-color: #00796b;" />
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab onSelectionChanged="#tabFactureChanged" style="-fx-background-color: #ffffff;" text="Factures">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <HBox layoutX="6.0" layoutY="-3.0" prefHeight="59.0" prefWidth="893.0" spacing="20.0">
+                            <children>
+                                <Label style="-fx-font-weight: bold; -fx-text-fill: #00796b;" text="Clients" />
+                                <ChoiceBox fx:id="clientChoice" prefHeight="26.0" prefWidth="810.0" style="-fx-background-color: #f1f8e9; -fx-border-color: #00796b;" />
+                            </children>
+                            <padding>
+                                <Insets left="20.0" top="10.0" />
+                            </padding>
+                        </HBox>
+                        <SplitPane dividerPositions="0.29797979797979796" layoutX="6.0" layoutY="59.0" prefHeight="507.0" prefWidth="890.0" style="-fx-background-color: #ffffff;">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <ListView fx:id="Entrainementajouter" layoutX="3.0" layoutY="1.0" prefHeight="503.0" prefWidth="256.0" style="-fx-background-color: #e0f7fa; -fx-border-color: #00796b;" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="entraineurchoice" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <Label fx:id="num_facture" layoutX="269.0" layoutY="31.0" prefHeight="17.0" prefWidth="122.0" style="-fx-font-weight: bold; -fx-text-fill: #00796b;" text="Numéro de facture" />
+                                        <Label layoutX="44.0" layoutY="79.0" style="-fx-font-weight: bold; -fx-text-fill: #00796b;" text="Service" />
+                                        <ChoiceBox fx:id="serviceChoice" layoutX="115.0" layoutY="74.0" prefHeight="26.0" prefWidth="474.0" style="-fx-background-color: #f1f8e9; -fx-border-color: #00796b;" />
+                                        <Button layoutX="202.0" layoutY="194.0" mnemonicParsing="false" onAction="#addEntrainementOnFacture" prefHeight="26.0" prefWidth="257.0" style="-fx-background-color: #00796b; -fx-text-fill: white;" text="Ajouter un entrainement à la facture" />
+                                        <ListView fx:id="serviceListOnFacture" layoutX="3.0" layoutY="274.0" prefHeight="229.0" prefWidth="613.0" style="-fx-background-color: #e0f7fa; -fx-border-color: #00796b;" />
+                                        <Button layoutX="246.0" layoutY="227.0" mnemonicParsing="false" onAction="#generatePDF" prefHeight="26.0" prefWidth="169.0" style="-fx-background-color: #00796b; -fx-text-fill: white;" text="Generer le PDF" />
+                                        <ChoiceBox fx:id="entraineurChoice" layoutX="115.0" layoutY="119.0" prefHeight="26.0" prefWidth="474.0" style="-fx-background-color: #f1f8e9; -fx-border-color: #00796b;" />
+                                        <Label layoutX="37.0" layoutY="124.0" style="-fx-font-weight: bold; -fx-text-fill: #00796b;" text="Entraineurs" />
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Entrainement">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <SplitPane dividerPositions="0.29797979797979796" layoutX="-11.0" layoutY="-13.0" prefHeight="580.0" prefWidth="907.0" style="-fx-background-color: #ffffff;">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <ListView fx:id="EntrainementList" layoutX="10.0" layoutY="13.0" prefHeight="562.0" prefWidth="253.0" style="-fx-background-color: #e0f7fa; -fx-border-color: #00796b;" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="383.0" prefWidth="417.0">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="149.0" layoutY="25.0" prefHeight="36.0" prefWidth="301.0" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #00796b;" text="Entrainement" />
+                                        <TextField fx:id="Sporttype" layoutX="122.0" layoutY="110.0" prefHeight="26.0" prefWidth="360.0" style="-fx-background-color: #f1f8e9; -fx-border-color: #00796b;" />
+                                        <Label layoutX="48.0" layoutY="174.0" style="-fx-font-weight: bold; -fx-text-fill: #00796b;" text="Entraineurs" />
+                                        <ChoiceBox fx:id="entraineursretake" layoutX="122.0" layoutY="170.0" prefHeight="26.0" prefWidth="362.0" style="-fx-background-color: #f1f8e9; -fx-border-color: #00796b;" />
+                                        <Button fx:id="addEntrainement" layoutX="502.0" layoutY="148.0" mnemonicParsing="false" onAction="#add_entrainement" prefHeight="70.0" prefWidth="116.0" style="-fx-background-color: #00796b; -fx-text-fill: white;" text="Ajouter un entrainement" />
+                                        <Label layoutX="65.0" layoutY="115.0" style="-fx-font-weight: bold; -fx-text-fill: #00796b;" text="Sport" />
+                                        <ChoiceBox fx:id="clientRetake" layoutX="122.0" layoutY="237.0" prefHeight="26.0" prefWidth="363.0" style="-fx-background-color: #f1f8e9; -fx-border-color: #00796b;" />
+                                        <Label layoutX="60.0" layoutY="242.0" style="-fx-font-weight: bold; -fx-text-fill: #00796b;" text="Clients" />
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Entraineur">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <SplitPane dividerPositions="0.29797979797979796" layoutX="-11.0" layoutY="-13.0" prefHeight="580.0" prefWidth="907.0" style="-fx-background-color: #ffffff;">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <ListView fx:id="EntraineurList" layoutX="10.0" layoutY="13.0" prefHeight="562.0" prefWidth="253.0" style="-fx-background-color: #e0f7fa; -fx-border-color: #00796b;" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="383.0" prefWidth="417.0">
+                                    <children>
+                                        <Label layoutX="85.0" layoutY="70.0" style="-fx-font-weight: bold; -fx-text-fill: #00796b;" text="Nom" />
+                                        <TextField fx:id="nomEntraineur" layoutX="130.0" layoutY="66.0" prefHeight="26.0" prefWidth="360.0" style="-fx-background-color: #f1f8e9; -fx-border-color: #00796b;" />
+                                        <Label layoutX="76.0" layoutY="112.0" style="-fx-font-weight: bold; -fx-text-fill: #00796b;" text="Prénom" />
+                                        <TextField fx:id="prenomEntraineur" layoutX="130.0" layoutY="107.0" prefHeight="26.0" prefWidth="360.0" style="-fx-background-color: #f1f8e9; -fx-border-color: #00796b;" />
+                                        <TextArea fx:id="adresseEntraineur" layoutX="131.0" layoutY="178.0" prefHeight="47.0" prefWidth="359.0" style="-fx-background-color: #f1f8e9; -fx-border-color: #00796b;" />
+                                        <Label layoutX="80.0" layoutY="194.0" style="-fx-font-weight: bold; -fx-text-fill: #00796b;" text="Adresse" />
+                                        <Label layoutX="88.0" layoutY="148.0" style="-fx-font-weight: bold; -fx-text-fill: #00796b;" text="Email" />
+                                        <TextField fx:id="emailEntraineur" layoutX="131.0" layoutY="144.0" prefHeight="26.0" prefWidth="359.0" style="-fx-background-color: #f1f8e9; -fx-border-color: #00796b;" />
+                                        <Button layoutX="141.0" layoutY="249.0" mnemonicParsing="false" onAction="#add_entraineur" prefHeight="26.0" prefWidth="341.0" style="-fx-background-color: #00796b; -fx-text-fill: white;" text="Ajouter un entraineur" />
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

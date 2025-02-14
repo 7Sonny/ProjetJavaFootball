@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.football2.LoginController" style="-fx-background-color: #e8eff5; -fx-padding: 50;">
+    <VBox alignment="CENTER" spacing="15" style="-fx-background-color: #ffffff; -fx-padding: 30; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #b0bec5;">
+        <Label text="Connexion" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #37474f;"/>
+
+        <TextField fx:id="usernameField" promptText="Nom d'utilisateur"
+                   style="-fx-background-color: #ffffff; -fx-border-color: #90a4ae; -fx-border-radius: 5; -fx-padding: 5;"/>
+        <PasswordField fx:id="passwordField" promptText="Mot de passe"
+                       style="-fx-background-color: #ffffff; -fx-border-color: #90a4ae; -fx-border-radius: 5; -fx-padding: 5;"/>
+
+        <Button text="Se connecter" onAction="#handleLogin"
+                style="-fx-background-color: #0288d1; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 5; -fx-padding: 10;"/>
+
+        <Label fx:id="errorLabel" textFill="red"/>
+    </VBox>
+</VBox>
