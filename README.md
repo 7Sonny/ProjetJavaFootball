@@ -11,7 +11,7 @@ Ce projet Java permet de gérer des clients, des entraîneurs et des séances d'
 - **Authentification** : Système de connexion sécurisé pour accéder à l'application.
 
 ## Structure du Projet
-
+```
 recepter/
 ├── .idea/                   # Fichiers de configuration IntelliJ IDEA
 ├── src/
@@ -38,7 +38,7 @@ recepter/
 ├── README.md                # Documentation du projet
 ├── recepter.sql             # Script SQL pour la base de données
 └── External Libraries/       # Bibliothèques externes utilisées
-
+```
 
 
 ## Dépendances
