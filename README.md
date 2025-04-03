@@ -11,7 +11,34 @@ Ce projet Java permet de gérer des clients, des entraîneurs et des séances d'
 - **Authentification** : Système de connexion sécurisé pour accéder à l'application.
 
 ## Structure du Projet
-ProjetJavaFootball/ │ ├── .idea/ # Configuration spécifique à l'IDE IntelliJ IDEA ├── .mvn/ # Wrapper Maven pour une utilisation simplifiée │ └── wrapper/ ├── src/ │ └── main/ │ ├── java/ │ │ └── com/ │ │ └── exemple/ │ │ ├── controller/ # Contrôleurs JavaFX pour la gestion de l'interface utilisateur │ │ ├── dao/ # Classes d'accès aux données pour interagir avec la base de données │ │ ├── model/ # Classes représentant les entités du domaine (Client, Entraîneur, Séance) │ │ └── util/ # Classes utilitaires, par exemple pour la génération de PDF │ └── resources/ │ ├── images/ # Ressources images utilisées dans l'application │ ├── fxml/ # Fichiers FXML pour la définition de l'interface utilisateur │ └── styles/ # Feuilles de style CSS pour la personnalisation de l'UI ├── .gitignore # Fichiers et répertoires à ignorer par Git ├── footballtraining.sql # Script SQL pour la création et l'initialisation de la base de données ├── mvnw # Wrapper Maven pour Linux/Mac ├── mvnw.cmd # Wrapper Maven pour Windows ├── pom.xml # Fichier de configuration Maven contenant les dépendances et les plugins └── README.md # Ce fichier
+
+recepter/
+├── .idea/                   # Fichiers de configuration IntelliJ IDEA
+├── src/
+│   └── main/
+│       ├── java/
+│       │   ├── bdd/         # Gestion des bases de données
+│       │   │   ├── BddManager
+│       │   │   ├── ClientManager
+│       │   │   ├── FactureManager
+│       │   │   └── ServiceManager
+│       │   ├── com.example.recepter/  # Package principal
+│       │   │   ├── Recepter
+│       │   │   └── RecepterController
+│       │   ├── Models/      # Modèles pour les entités métier
+│       │   │   ├── Client
+│       │   │   └── Service
+│       │   ├── tools/       # Outils divers
+│       │   │   └── Generator
+│       │   └── module-info.java # Fichier de module Java
+│       └── resources/       # Fichiers de ressources (FXML, configurations)
+├── mvnw                     # Script Unix pour Maven Wrapper
+├── mvnw.cmd                 # Script Windows pour Maven Wrapper
+├── pom.xml                  # Fichier de configuration Maven
+├── README.md                # Documentation du projet
+├── recepter.sql             # Script SQL pour la base de données
+└── External Libraries/       # Bibliothèques externes utilisées
+
 
 
 ## Dépendances
