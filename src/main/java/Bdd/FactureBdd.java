@@ -9,17 +9,16 @@ public class FactureBdd {
         String sql_request = "INSERT INTO facture (nomclient, nomentraineur, service) VALUES (?, ?, ?)";
 
         try (PreparedStatement pstmt = connection.prepareStatement(sql_request)) {
-            pstmt.setString(1, String.valueOf(nomclient));
-            pstmt.setString(2, nomentraineur);
-            pstmt.setString(3, String.valueOf(service));
-
-
+            pstmt.setString(1, nomclient);
+            pstmt.setString(2, nomentraineur); // Corrigé : nomentraineur en 2ème position
+            pstmt.setString(3, service);       // Corrigé : service en 3ème position
 
             pstmt.execute();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
+
 
     public ResultSet getFacture() {
         BddManager bdd = new BddManager();

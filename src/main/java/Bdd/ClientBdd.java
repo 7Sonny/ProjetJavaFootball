@@ -1,6 +1,3 @@
-
-
-
 package Bdd;
 
 import java.sql.*;
@@ -35,9 +32,6 @@ import java.sql.*;
                 throw new RuntimeException(e);
             }
         }
-
-
-
     }
 
 

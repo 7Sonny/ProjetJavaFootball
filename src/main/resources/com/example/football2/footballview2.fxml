@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.SplitPane?>
@@ -13,8 +14,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #f5f5f5;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.football2.FootballController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #f5f5f5;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/21-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.football2.FootballController">
     <tabs>
+        <!-- Onglet Clients -->
         <Tab text="Clients">
             <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
@@ -45,6 +47,8 @@
                 </AnchorPane>
             </content>
         </Tab>
+
+        <!-- Onglet Factures -->
         <Tab onSelectionChanged="#tabFactureChanged" style="-fx-background-color: #ffffff;" text="Factures">
             <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
@@ -83,6 +87,8 @@
                 </AnchorPane>
             </content>
         </Tab>
+
+        <!-- Onglet Entrainement -->
         <Tab text="Entrainement">
             <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
@@ -112,6 +118,8 @@
                 </AnchorPane>
             </content>
         </Tab>
+
+        <!-- Onglet Entraineur -->
         <Tab text="Entraineur">
             <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
@@ -138,6 +146,35 @@
                                 </AnchorPane>
                             </items>
                         </SplitPane>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+
+        <!-- Nouvel onglet Planning -->
+        <Tab text="Planning">
+            <content>
+                <AnchorPane prefHeight="600.0" prefWidth="900.0">
+                    <children>
+                        <!-- ListView des plannings existants -->
+                        <ListView fx:id="planningList" layoutX="10.0" layoutY="10.0" prefHeight="300.0" prefWidth="300.0"
+                                  style="-fx-background-color: #e0f7fa; -fx-border-color: #00796b;" />
+                        <!-- ChoiceBox pour sélectionner un client -->
+                        <ChoiceBox fx:id="planningClientChoice" layoutX="320.0" layoutY="10.0" prefWidth="200.0"
+                                   style="-fx-background-color: #f1f8e9; -fx-border-color: #00796b;" />
+                        <!-- ChoiceBox pour sélectionner un entraîneur -->
+                        <ChoiceBox fx:id="planningEntraineurChoice" layoutX="320.0" layoutY="50.0" prefWidth="200.0"
+                                   style="-fx-background-color: #f1f8e9; -fx-border-color: #00796b;" />
+                        <!-- DatePicker pour choisir la date -->
+                        <DatePicker fx:id="planningDate" layoutX="320.0" layoutY="90.0" prefWidth="200.0"
+                                    style="-fx-background-color: #f1f8e9; -fx-border-color: #00796b;" />
+                        <!-- TextField pour saisir l'heure (format "HH:mm") -->
+                        <TextField fx:id="planningTime" layoutX="320.0" layoutY="130.0" prefWidth="200.0"
+                                   promptText="HH:mm"
+                                   style="-fx-background-color: #f1f8e9; -fx-border-color: #00796b;" />
+                        <!-- Bouton pour ajouter le planning -->
+                        <Button layoutX="320.0" layoutY="170.0" mnemonicParsing="false" onAction="#addPlanning" prefWidth="200.0" text="Ajouter Planning"
+                                style="-fx-background-color: #00796b; -fx-text-fill: white;" />
                     </children>
                 </AnchorPane>
             </content>
