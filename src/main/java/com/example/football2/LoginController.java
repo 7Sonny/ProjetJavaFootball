@@ -25,7 +25,7 @@ public class LoginController {
 
     // Identifiants test (à remplacer par une base de données plus tard)
     private final String USERNAME = "admin";
-    private final String PASSWORD = "1234";
+    private final String PASSWORD = "Administrateur1234!";
 
     @FXML
     private void handleLogin(ActionEvent event) {
