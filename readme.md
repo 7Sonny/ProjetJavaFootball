@@ -12,7 +12,7 @@ Ce projet Java permet de gérer des clients, des entraîneurs et des séances d'
 
 ## Structure du Projet
 ```
-recepter/
+football2/
 ├── .idea/                   # Fichiers de configuration IntelliJ IDEA
 ├── src/
 │   └── main/
@@ -23,8 +23,8 @@ recepter/
 │       │   │   ├── FactureManager
 │       │   │   └── ServiceManager
 │       │   ├── com.example.recepter/  # Package principal
-│       │   │   ├── Recepter
-│       │   │   └── RecepterController
+│       │   │   ├── football2
+│       │   │   └── FootballController
 │       │   ├── Models/      # Modèles pour les entités métier
 │       │   │   ├── Client
 │       │   │   └── Service
@@ -36,7 +36,7 @@ recepter/
 ├── mvnw.cmd                 # Script Windows pour Maven Wrapper
 ├── pom.xml                  # Fichier de configuration Maven
 ├── README.md                # Documentation du projet
-├── recepter.sql             # Script SQL pour la base de données
+├── footballtraining.sql             # Script SQL pour la base de données
 └── External Libraries/       # Bibliothèques externes utilisées
 ```
 
