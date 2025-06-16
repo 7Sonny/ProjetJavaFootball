@@ -8,7 +8,7 @@ Ce projet Java permet de gérer des clients, des entraîneurs et des séances d'
 - **Gestion des Entraîneurs** : Ajouter, modifier et supprimer des entraîneurs.
 - **Gestion des Séances d'Entraînement** : Planifier et gérer les séances d'entraînement.
 - **Facturation** : Générer des factures PDF détaillées associant clients, entraîneurs et séances d'entraînement.
-- **Authentification** : Système de connexion sécurisé pour accéder à l'application.
+- **Authentification** : Système de connexion pour accéder à l'application.
 
 ## Structure du Projet
 ```
